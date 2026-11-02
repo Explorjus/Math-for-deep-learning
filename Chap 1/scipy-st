@@ -1,0 +1,15 @@
+import numpy as np
+from scipy.stats import ttest_ind
+import matplotlib.pylab as plt
+
+a = np.random.normal(0,1,1000) # dwie pierwsze wartosci to srednia i odhcylenie standardowe czyli szerokosc krzywej dzwonowej
+b = np.random.normal(0,0.5,1000)
+c = np.random.normal(0.1,1,1000)
+
+print(ttest_ind(a,b)) # liczby pochodza z krzywje dzwonowej
+
+print(ttest_ind(a,c))
+
+plt.plot(a,b)
+
+plt.show()
